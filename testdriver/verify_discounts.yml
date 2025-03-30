@@ -1,0 +1,50 @@
+version: 4.2.20
+session: 67e957e5ea838f51bb5986d1
+steps:
+  - prompt: click Insurance Education
+    commands:
+      - command: hover-text
+        text: Insurance Education
+        description: insurance education option in the main content
+        action: click
+  - prompt: remember the current discount % promo
+    commands:
+      - command: remember
+        description: current discount promo
+        value: 20%
+  - prompt: click get my license
+    commands:
+      - command: hover-text
+        text: Get My License
+        description: get my license button in the main content
+        action: click
+  - prompt: click Choose a Pre-License Package
+    commands:
+      - command: hover-text
+        text: Choose a Pre-License Package
+        description: choose a pre-license package button in the main content
+        action: click
+  - prompt: Click Learn More under 4-in-1 Lincense Bundle
+    commands:
+      - command: hover-text
+        text: Learn More
+        description: learn more button under 4-in-1 license bundle
+        action: click
+  - prompt: click Compare Packages
+    commands:
+      - command: hover-text
+        text: Compare Packages
+        description: compare packages button in the main content
+        action: click
+  - prompt: under 4-in-1 Program + Exam Prep, click Enroll Now
+    commands:
+      - command: hover-text
+        text: Enroll Now
+        description: enroll now button under 4-in-1 Program + Exam Prep
+        action: click
+  - prompt: >-
+      assert that the previously remember promo discount % is being applied to
+      the cart
+    commands:
+      - command: assert
+        expect: the discount of 20% is applied to the cart
